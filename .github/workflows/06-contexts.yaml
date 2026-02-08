@@ -1,0 +1,30 @@
+name: 06 - Contexts
+
+on: push
+
+jobs:
+    echo-data:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Display information
+              run: |
+                echo "Event name: ${{ github.event_name }}"
+                echo "Repository: ${{ github.repository }}"
+                echo "Event Name: ${{ github.event_name }}"
+                echo "Ref: ${{ github.ref }}"
+                echo "SHA: ${{ github.sha }}"
+                echo "Actor: ${{ github.actor }}"
+                echo "Workflow: ${{ github.workflow }}"
+                echo "Run ID: ${{ github.run_id }}"
+                echo "Run Number: ${{ github.run_number }}"
+                echo "Ref protected: ${{ github.ref_protected }}"
+                echo "Ref deleted: ${{ github.ref_deleted }}"
+                echo "Ref forced: ${{ github.ref_forced }}"
+                echo "Ref forced: ${{ github.ref_forced }}"
+                echo "GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}"
+                echo "GITHUB_REPOSITORY_URL: ${{ github.repository_url }}"
+                echo "GITHUB_REPOSITORY_NAME: ${{ github.repository_name }}"
+                echo "GITHUB_REPOSITORY_DESCRIPTION: ${{ github.repository_description }}"
+            - name: Retrieve Variable
+              run: |
+                echo "Variable value: ${{ vars.MY_VAR }}"
