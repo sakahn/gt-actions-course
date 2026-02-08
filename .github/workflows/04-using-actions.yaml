@@ -13,6 +13,7 @@ jobs:
               with:
                 node-version: '20.19.0'
             - name: Install Dependencies
+              working-directory: ./04-using-actions/react-app
               run: npm ci
 
         # 0. Checkout the code from the repository
